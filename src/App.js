@@ -5,6 +5,8 @@ import { Grid } from '@material-ui/core'
 import SearchBar  from './components/SearchBar';
 import VideoDetail  from './components/VideoDetail'
 import youtube from "./api/youtube";
+import VideoItem from "./components/VideoItem";
+import VideoList from "./components/VideoList";
 
 class App extends React.Component{
 
@@ -43,7 +45,7 @@ class App extends React.Component{
                             <VideoDetail video={this.state.selectedVideo}/>
                         </Grid>
                         <Grid item xs={4}>
-                            {/*VIDEO LIST*/}
+                            <VideoList videos = {this.state.videos} />
                         </Grid>
                     </Grid>
                 </Grid>
